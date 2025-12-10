@@ -1,0 +1,11 @@
+{
+  "name": "its-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-admin": "^4.15.3",
+    "ra-data-simple-rest": "^4.13.0"
+  }
+}
