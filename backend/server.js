@@ -1,9 +1,12 @@
 const express = require("express");
-const cors = require("cors");
+const cors    = require("cors");
 const tickets = require("./tickets");
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  exposedHeaders: ["Content-Range"]  // Required for react-admin pagination
+}));
 app.use(express.json());
 
 // Health check
@@ -15,6 +18,7 @@ app.get("/health", (req, res) => {
 app.use("/tickets", tickets);
 
 // Start server
-app.listen(3001, () => {
-  console.log("ITS Backend is running on port 3001");
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`ITS Backend is running on port ${PORT}`);
 });

@@ -2,10 +2,17 @@
   "name": "its-frontend",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-admin": "^4.15.3",
-    "ra-data-simple-rest": "^4.13.0"
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.0"
+  },
+  "scripts": {
+    "start": "vite --port 3000",
+    "build": "vite build"
   }
 }
